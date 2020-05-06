@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import pandas as pd
 
 pd.set_option('display.max_columns', None) # See all dataframe columns
@@ -32,10 +33,9 @@ features = scaler.fit_transform(features)
 from sklearn.model_selection import train_test_split
 f_train, f_test, t_train, t_test = train_test_split(features, target, test_size = 0.25, random_state = 0)
 
-from sklearn.tree import DecisionTreeClassifier
-classifier = DecisionTreeClassifier(criterion='entropy', random_state=0)
+from sklearn.neighbors import KNeighborsClassifier
+classifier = KNeighborsClassifier(n_neighbors=5, metric='minkowski', p=2)
 classifier.fit(f_train, t_train)
-
 predictions = classifier.predict(f_test)
 
 from sklearn.metrics import confusion_matrix, accuracy_score

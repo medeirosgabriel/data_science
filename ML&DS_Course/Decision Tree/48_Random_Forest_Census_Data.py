@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri May  1 20:17:18 2020
-
-@author: Alba
-"""
 
 import pandas as pd
 pd.set_option('display.max_columns', None) # See all dataframe columns

@@ -2,6 +2,7 @@
 import pandas as pd
 
 df = pd.read_csv('Data\\credit_data.csv')
+df.loc[df.age < 0, 'age'] = 40.92 # Average
 
 features = df.iloc[:, 1:4].values
 target = df.iloc[:,4].values
@@ -14,7 +15,7 @@ features[:, 1:4] = imputer.transform(features[:, 1:4])
 
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
-previsores = scaler.fit_transform(features)
+features = scaler.fit_transform(features)
 
 from sklearn.model_selection import train_test_split
 f_train, f_test, t_train, t_test = train_test_split(features, target, test_size = 0.25, random_state=0)
@@ -28,3 +29,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score
 precision = accuracy_score(t_test, predictions)
 matrix = confusion_matrix(t_test, predictions)
 
+# Base Line = Help to evaluate the models
+# Calculus = most_commom/rest
+from collections import Counter
+print(Counter( t_test))

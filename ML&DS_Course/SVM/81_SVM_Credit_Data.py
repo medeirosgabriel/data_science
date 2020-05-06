@@ -21,11 +21,14 @@ features = scaler.fit_transform(features)
 from sklearn.model_selection import train_test_split
 f_train, f_test, t_train, t_test = train_test_split(features, target, test_size = 0.3, random_state=0)
 
-from sklearn.ensemble import RandomForestClassifier
-classifier = RandomForestClassifier(n_estimators=40, criterion='entropy', random_state=0) # Random state = 0 -> stabilizes at a value
+from sklearn.svm import SVC
+classifier = SVC(kernel='rbf', random_state=1, C=2) # c = error penalty
 classifier.fit(f_train, t_train)
 predictions = classifier.predict(f_test)
 
 from sklearn.metrics import confusion_matrix, accuracy_score
 precision = accuracy_score(t_test, predictions)
 matrix = confusion_matrix(t_test, predictions)
+
+import collections
+collections.Counter(t_test)
