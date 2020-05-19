@@ -5,7 +5,7 @@ from keras.models import Sequential
 from keras.layers import Dense # Dense Neural Net -> All connections between neurons
 pd.set_option('display.max_columns', None) # See all dataframe columns
 
-df = pd.read_csv('Data\\census_data.csv')
+df = pd.read_csv('..\\Data\\census_data.csv')
 
 features = df.iloc[:,0:14].values
 target = df.iloc[:,14].values

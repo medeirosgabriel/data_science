@@ -3,7 +3,7 @@ import pandas as pd
 
 pd.set_option('display.max_columns', None) # See all dataframe columns
 
-df = pd.read_csv('Data\\census_data.csv')
+df = pd.read_csv('..\\Data\\census_data.csv')
 
 features = df.iloc[:,0:14].values
 target = df.iloc[:,14].values

@@ -2,7 +2,11 @@
 
 import Orange
  
-data = Orange.data.Table('Data\\credit_data.csv')
+# i#columnname -> Ignores the column
+# c#columnname -> Target variable
+# Put in the data to avoid error
+
+data = Orange.data.Table('..\\Data\\credit_data.csv')
 print(data.domain)
  
 divided_data = Orange.evaluation.testing.sample(data, n=.25)

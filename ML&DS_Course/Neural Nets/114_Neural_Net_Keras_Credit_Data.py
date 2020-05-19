@@ -4,7 +4,7 @@ import pandas as pd
 from keras.models import Sequential
 from keras.layers import Dense # Dense Neural Net -> All connections between neurons
 
-df = pd.read_csv('Data\\credit_data.csv')
+df = pd.read_csv('..\\Data\\credit_data.csv')
 df.loc[df.age < 0, 'age'] = 40.92 # Mean
 
 features = df.iloc[:, 1:4].values

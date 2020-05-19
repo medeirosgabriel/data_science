@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-df = pd.read_csv('Data\\credit_data.csv')
+df = pd.read_csv('..\\Data\\credit_data.csv')
 df.loc[df.age < 0, 'age'] = 40.92 # Mean
 
 features = df.iloc[:, 1:4].values

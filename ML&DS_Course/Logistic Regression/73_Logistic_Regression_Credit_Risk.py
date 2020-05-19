@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
 
-path = 'Data\\credit_risk_data.csv'
+path = '..\\Data\\credit_risk_data.csv'
 df = pd.read_csv(path)
 features = df.iloc[:,0:4].values
 target = df.iloc[:,4].values
