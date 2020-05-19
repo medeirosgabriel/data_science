@@ -2,7 +2,7 @@
 
 import pandas as pd
 
-df = pd.read_csv("Data\\house_prices.csv")
+df = pd.read_csv("..\\Data\\house_prices.csv")
 
 features = df.iloc[:, 5:6].values
 target = df.iloc[:, 2].values

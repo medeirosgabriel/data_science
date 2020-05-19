@@ -2,7 +2,7 @@
 
 import pandas
 
-df = pandas.read_csv("Data\\health_insurance.csv")
+df = pandas.read_csv("..\\Data\\health_insurance.csv")
 
 features = df.iloc[:, 0].values
 target = df.iloc[:, 1].values
