@@ -5,7 +5,7 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 import numpy as np
 
-df = pd.read_csv("Data\\credit_card_clients.csv", header = 1)
+df = pd.read_csv('..\\Data\\credit_card_clients.csv', header = 1)
 df['BILL_TOTAL'] = df['BILL_AMT1'] + df['BILL_AMT2'] + df['BILL_AMT3'] + df['BILL_AMT4'] + df['BILL_AMT5'] + df['BILL_AMT6']
 
 x = df.iloc[:,[1,2,3,4,5,25]].values
