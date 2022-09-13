@@ -1,1 +1,2 @@
-## Data Science With Python
+## **Practicing Data Science**
+### Programming Languages: R and Python
